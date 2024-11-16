@@ -2,7 +2,6 @@
 
 Django Rest Api for Crvo to web
 
-
 ## Installation
 
 Please get https://github.com/stephlaurrain/pylibs
