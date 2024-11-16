@@ -2,10 +2,10 @@
 
 Django Rest Api for Crvo to web
 
-## Installation
+### Installation
 
 Please get https://github.com/stephlaurrain/pylibs
-The files must be in the 'utils' folder.
+The files must be inside the 'utils' folder.
 
 ### Install dependencies
 
