@@ -9,6 +9,7 @@ from django.db import models
 
 
 class Arrow(models.Model):
+    id = models.AutoField(primary_key=True)
     visua_org_id = models.IntegerField(blank=True, null=True)
     visua_dest_id = models.IntegerField(blank=True, null=True)
     color = models.CharField(max_length=255, blank=True, null=True)
@@ -24,6 +25,7 @@ class Arrow(models.Model):
 
 
 class Category(models.Model):
+    id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=255, blank=True, null=True)
     color = models.CharField(max_length=50, blank=True, null=True)
     type_category = models.CharField(max_length=1, blank=True, null=True)
@@ -35,6 +37,7 @@ class Category(models.Model):
 
 
 class CategoryObject(models.Model):
+    id = models.AutoField(primary_key=True)
     category_id = models.IntegerField(blank=True, null=True)
     project_id = models.IntegerField(blank=True, null=True)
     contact_id = models.IntegerField(blank=True, null=True)
@@ -45,6 +48,7 @@ class CategoryObject(models.Model):
 
 
 class Contact(models.Model):
+    id = models.AutoField(primary_key=True)
     username = models.CharField(max_length=50, blank=True, null=True)
     name = models.CharField(max_length=150, blank=True, null=True)
     firstname = models.CharField(max_length=50, blank=True, null=True)
@@ -94,6 +98,7 @@ class ContactProject(models.Model):
 
 
 class Decisional(models.Model):
+    id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=255, blank=True, null=True)
     type_decisional = models.CharField(max_length=255, blank=True, null=True)
     scoring = models.IntegerField(blank=True, null=True)
@@ -106,6 +111,7 @@ class Decisional(models.Model):
 
 
 class Goal(models.Model):
+    id = models.AutoField(primary_key=True)
     abscon = models.TextField(blank=True, null=True)
     formulation = models.TextField(blank=True, null=True)
     measurable = models.TextField(blank=True, null=True)
@@ -123,6 +129,7 @@ class Goal(models.Model):
 
 
 class Link(models.Model):
+    id = models.AutoField(primary_key=True)
     project_id = models.IntegerField(blank=True, null=True)
     title = models.CharField(max_length=255, blank=True, null=True)
     path = models.CharField(max_length=255, blank=True, null=True)
@@ -136,6 +143,7 @@ class Link(models.Model):
 
 
 class Note(models.Model):
+    id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=255, blank=True, null=True)
     contain = models.TextField(blank=True, null=True)
     project_id = models.IntegerField(blank=True, null=True)
@@ -150,7 +158,7 @@ class Note(models.Model):
         db_table = 'note'
 
 
-class Param(models.Model):
+class Param(models.Model):    
     node = models.CharField(max_length=255, blank=True, null=True)
     key = models.CharField(max_length=255, blank=True, null=True)
     second_key = models.CharField(max_length=255, blank=True, null=True)
@@ -162,6 +170,7 @@ class Param(models.Model):
 
 
 class Picture(models.Model):
+    id = models.AutoField(primary_key=True)
     project_id = models.IntegerField(blank=True, null=True)
     filename = models.TextField(blank=True, null=True)
     color_back = models.CharField(max_length=255, blank=True, null=True)
@@ -173,6 +182,7 @@ class Picture(models.Model):
 
 
 class Project(models.Model):
+    id = models.AutoField(primary_key=True)
     type_projet = models.CharField(max_length=1, blank=True, null=True)
     title = models.CharField(max_length=255, blank=True, null=True)
     date_creation = models.DateTimeField(blank=True, null=True)
@@ -205,6 +215,7 @@ class Project(models.Model):
 
 
 class Reminder(models.Model):
+    id = models.AutoField(primary_key=True)
     reminder = models.IntegerField(blank=True, null=True)
     unit_reminder = models.CharField(max_length=10, blank=True, null=True)
     project_id = models.IntegerField(blank=True, null=True)
@@ -215,6 +226,7 @@ class Reminder(models.Model):
 
 
 class Sticker(models.Model):
+    id = models.AutoField(primary_key=True)
     project_id = models.IntegerField(blank=True, null=True)
     contain = models.TextField(blank=True, null=True)
     color_back = models.CharField(max_length=255, blank=True, null=True)
@@ -246,6 +258,7 @@ class TypeProject(models.Model):
 
 
 class Visua(models.Model):
+    id = models.AutoField(primary_key=True)
     position_x = models.IntegerField(blank=True, null=True)
     position_y = models.IntegerField(blank=True, null=True)
     height = models.IntegerField(blank=True, null=True)
